@@ -1,0 +1,9 @@
+add $t0, $s1, $s2
+add $t1, $s3, $s4
+lw $t2, 0($t0)
+lw $t3, 0($t1)
+or $t4, $t2, $t3
+and $t5, $t4, $s1
+sw $t4, 0($t0)
+sw $t5, 0($t1)
+beq $t5, $t4, -4
