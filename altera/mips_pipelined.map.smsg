@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at dataMemory.v(13): always construct contains both blocking and non-blocking assignments File: C:/Users/lucas/Desktop/mips-pipelined/hdl/dataMemory.v Line: 13
+Warning (10268): Verilog HDL information at forwarding.v(27): always construct contains both blocking and non-blocking assignments File: C:/Users/lucas/Desktop/mips-pipelined/hdl/forwarding.v Line: 27
+Warning (10268): Verilog HDL information at forwarding.v(44): always construct contains both blocking and non-blocking assignments File: C:/Users/lucas/Desktop/mips-pipelined/hdl/forwarding.v Line: 44
