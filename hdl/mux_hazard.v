@@ -19,14 +19,14 @@ module mux_hazard (control, EXIn, MEMIn, WBIn, EXOut, MEMOut, WBOut);
     always @ (*) begin
         case (control)
             1'b0: begin
-                EXOut <= EXIn;
-                MEMOut <= MEMIn;
-                WBOut <= WBIn;
+                EXOut = EXIn;
+                MEMOut = MEMIn;
+                WBOut = WBIn;
             end
             1'b1: begin
-                EXOut <= 4'b0;
-                MEMOut <= 3'b0;
-                WBOut <= 2'b0;
+                EXOut = 4'b0;
+                MEMOut = 3'b0;
+                WBOut = 2'b0;
             end
         endcase
     end

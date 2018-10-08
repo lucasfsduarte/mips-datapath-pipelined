@@ -16,18 +16,18 @@ module alu (A, B, aluCtrl, zero, aluOut, reset);
 
         // Aplica o reset;
         if (reset) begin
-            aluOut <= 32'b0;
+            aluOut = 32'b0;
         end
         else begin
             // Operações existentes na ALU;
             case (aluCtrl)
-                4'b0000: aluOut <= A & B; // Caso 0 - AND;
-                4'b0001: aluOut <= A | B; // Caso 1 - OR;
-                4'b0010: aluOut <= A + B; // Caso 2 - ADD;
-                4'b0110: aluOut <= A - B; // Caso 6 - SUB;
-                4'b0111: aluOut <= (A < B) ? 32'b1 : 32'b0; // Caso 7 - SLT;
-                4'b1100: aluOut <= ~(A | B); // Caso 12 - NOR;
-                default: aluOut <= 32'b0; // Default;
+                4'b0000: aluOut = A & B; // Caso 0 - AND;
+                4'b0001: aluOut = A | B; // Caso 1 - OR;
+                4'b0010: aluOut = A + B; // Caso 2 - ADD;
+                4'b0110: aluOut = A - B; // Caso 6 - SUB;
+                4'b0111: aluOut = (A < B) ? 32'b1 : 32'b0; // Caso 7 - SLT;
+                4'b1100: aluOut = ~(A | B); // Caso 12 - NOR;
+                default: aluOut = 32'b0; // Default;
             endcase
         end
     end

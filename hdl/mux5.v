@@ -15,9 +15,9 @@ module mux5 (mux5In1, mux5In2, op_mux5, mux5Out);
 	always@ (*) begin
 		case (op_mux5)
 		      1'b0:
-                mux5Out <= mux5In1;
+                mux5Out = mux5In1;
               1'b1:
-                mux5Out <= mux5In2;
+                mux5Out = mux5In2;
 		endcase
 	end
 

@@ -31,6 +31,7 @@ module mips_dpipelined (clk, reset, out1, out2, out3, out4, out5, out6, out7);
 
     // Wires que serão utilizados para conectar os módulos;
     wire sin1, sin2, sin3, sin4;
+
     // PC
     wire [31:0] pcIn, pcOut;
 
@@ -118,37 +119,15 @@ module mips_dpipelined (clk, reset, out1, out2, out3, out4, out5, out6, out7);
     wire [2:0] hzdMEMOut;
     wire [1:0] hzdWBOut;
 
-    // Chamada dos módulos;
+    ////////////////////////////////////////////////////////////////////////////
+    //   Módulos Default                                                      //
+    ////////////////////////////////////////////////////////////////////////////
 
     pc pc_module (.pcIn(pcIn), .pcOut(pcOut), .clk(clk), .hzdWrite(hzdPCWrite), .reset(reset));
 
     instructionMemory instruction_memory_module (.address(pcOut), .instruction(instruction));
 
     control control_module (.opCode(if_id_instructionOut[31:26]), .EX(id_ex_EX), .MEM(id_ex_MEM), .WB(id_ex_WB), .if_flush(if_flush), .reset(reset));
-
-    // Módulos do pipeline
-    if_id ifid (.haveInstrOut(sin1), .clk(clk), .hzdWrite(hzdIFIDWrite), .reset(reset), .instructionIn(instruction), .pcIn(outAdd4), .instructionOut(if_id_instructionOut), .pcOut(if_id_pcOut), .if_flush(if_flush));
-
-    id_ex idex (.haveInstrIn(sin1), .haveInstrOut(sin2), .clk(clk), .reset(reset), .pcIn(if_id_pcOut), .readData1In(outRegA), .readData2In(outRegB), .signExtendIn(outSignExt), .rsIn(if_id_instructionOut[25:21]), .rtIn(if_id_instructionOut[20:16]), .rdIn(if_id_instructionOut[15:11]), .WBIn(hzdWBOut), .MEMIn(hzdMEMOut), .EXIn(hzdEXOut),
-        .pcOut(id_ex_pcOut), .readData1Out(id_ex_readData1Out), .readData2Out(id_ex_readData2Out), .signExtendOut(id_ex_signExtendedOut), .rsOut(id_ex_rsOut), .rtOut(id_ex_rtOut), .rdOut(id_ex_rdOut), .WBOut(id_ex_WBOut), .MEMOut(id_ex_MEMOut), .regDstOut(id_ex_regDstOut), .ALUOpOut(id_ex_AluOpOut), .ALUSrcOut(id_ex_AluSrcOut));
-
-    ex_mem exmem (.haveInstrIn(sin2), .haveInstrOut(sin3), .clk(clk), .reset(reset), .pcIn(outAdd), .zeroIn(zero), .ALUOutIn(outAlu), .readData2In(muxForwardBOut), .regFromMuxIn(outMuxRegisters), .WBIn(id_ex_WBOut), .MEMIn(id_ex_MEMOut),
-        .pcOut(ex_mem_pcOut), .zeroOut(ex_mem_zeroOut), .ALUOutOut(ex_mem_aluOutOut), .readData2Out(ex_mem_readData2Out), .regFromMuxOut(ex_mem_regFromMuxOut), .WBOut(ex_mem_WBOut), .branchOut(ex_mem_branchOut), .memReadOut(ex_mem_memReadOut), .memWriteOut(ex_mem_memWriteOut));
-
-    mem_wb memwb (.haveInstrIn(sin3), .haveInstrOut(sin4), .clk(clk), .reset(reset), .readDataIn(outDataMem), .ALUOutIn(ex_mem_aluOutOut), .regFromMuxIn(ex_mem_regFromMuxOut), .WBIn(ex_mem_WBOut),
-        .readDataOut(mem_wb_readDataOut), .ALUOutOut(mem_wb_aluOutOut), .regFromMuxOut(mem_wb_regFromMuxOut), .regWrite(mem_wb_regWrite), .memToReg(mem_wb_memToReg));
-
-    forwarding_unity forwarding (.reset(reset), .id_ex_rs(id_ex_rsOut), .id_ex_rt(id_ex_rtOut), .ex_mem_rd(ex_mem_regFromMuxOut), .mem_wb_rd(mem_wb_regFromMuxOut), .ex_mem_regWrite(ex_mem_WBOut[1]), .mem_wb_regWrite(mem_wb_regWrite), .forwardA(forwardA), .forwardB(forwardB));
-
-    mux32_3 muxForwardingA (.op(forwardA), .muxIn1(id_ex_readData1Out), .muxIn2(ex_mem_aluOutOut), .muxIn3(outMuxDataMem), .muxOut(muxForwardAOut));
-
-    mux32_3 muxForwardingB (.op(forwardB), .muxIn1(id_ex_readData2Out), .muxIn2(ex_mem_aluOutOut), .muxIn3(outMuxDataMem), .muxOut(muxForwardBOut));
-
-    hazard_unit hazarding (.reset(reset), .id_ex_rt(id_ex_rtOut), .id_ex_memRead(id_ex_MEMOut[1]), .if_id_instruction(if_id_instructionOut), .mux_controller(hzdMuxControl), .pc_write(hzdPCWrite), .if_id_write(hzdIFIDWrite));
-
-    mux_hazard muxHazard (.control(hzdMuxControl), .EXIn(id_ex_EX), .MEMIn(id_ex_MEM), .WBIn(id_ex_WB), .EXOut(hzdEXOut), .MEMOut(hzdMEMOut), .WBOut(hzdWBOut));
-
-    //////////////////////////////////
 
     mux5 mux_reg_module (.mux5In1(id_ex_rtOut), .mux5In2(id_ex_rdOut), .op_mux5(id_ex_regDstOut), .mux5Out(outMuxRegisters));
 
@@ -175,6 +154,35 @@ module mips_dpipelined (clk, reset, out1, out2, out3, out4, out5, out6, out7);
     logicAnd and_module (.andIn1(ex_mem_branchOut), .andIn2(ex_mem_zeroOut), .andOut(PCSrc));
 
     mux32 muxAnd (.mux32In1(outAdd4), .mux32In2(ex_mem_pcOut), .op_mux32(PCSrc), .mux32Out(pcIn));
+
+    ////////////////////////////////////////////////////////////////////////////
+    //   Módulos Pipelined                                                    //
+    ////////////////////////////////////////////////////////////////////////////
+
+    if_id ifid (.haveInstrOut(sin1), .clk(clk), .hzdWrite(hzdIFIDWrite), .reset(reset), .instructionIn(instruction), .pcIn(outAdd4), .instructionOut(if_id_instructionOut), .pcOut(if_id_pcOut), .if_flush(if_flush));
+
+    id_ex idex (.haveInstrIn(sin1), .haveInstrOut(sin2), .clk(clk), .reset(reset), .pcIn(if_id_pcOut), .readData1In(outRegA), .readData2In(outRegB), .signExtendIn(outSignExt), .rsIn(if_id_instructionOut[25:21]), .rtIn(if_id_instructionOut[20:16]), .rdIn(if_id_instructionOut[15:11]), .WBIn(hzdWBOut), .MEMIn(hzdMEMOut), .EXIn(hzdEXOut),
+        .pcOut(id_ex_pcOut), .readData1Out(id_ex_readData1Out), .readData2Out(id_ex_readData2Out), .signExtendOut(id_ex_signExtendedOut), .rsOut(id_ex_rsOut), .rtOut(id_ex_rtOut), .rdOut(id_ex_rdOut), .WBOut(id_ex_WBOut), .MEMOut(id_ex_MEMOut), .regDstOut(id_ex_regDstOut), .ALUOpOut(id_ex_AluOpOut), .ALUSrcOut(id_ex_AluSrcOut));
+
+    ex_mem exmem (.haveInstrIn(sin2), .haveInstrOut(sin3), .clk(clk), .reset(reset), .pcIn(outAdd), .zeroIn(zero), .ALUOutIn(outAlu), .readData2In(muxForwardBOut), .regFromMuxIn(outMuxRegisters), .WBIn(id_ex_WBOut), .MEMIn(id_ex_MEMOut),
+        .pcOut(ex_mem_pcOut), .zeroOut(ex_mem_zeroOut), .ALUOutOut(ex_mem_aluOutOut), .readData2Out(ex_mem_readData2Out), .regFromMuxOut(ex_mem_regFromMuxOut), .WBOut(ex_mem_WBOut), .branchOut(ex_mem_branchOut), .memReadOut(ex_mem_memReadOut), .memWriteOut(ex_mem_memWriteOut));
+
+    mem_wb memwb (.haveInstrIn(sin3), .haveInstrOut(sin4), .clk(clk), .reset(reset), .readDataIn(outDataMem), .ALUOutIn(ex_mem_aluOutOut), .regFromMuxIn(ex_mem_regFromMuxOut), .WBIn(ex_mem_WBOut),
+        .readDataOut(mem_wb_readDataOut), .ALUOutOut(mem_wb_aluOutOut), .regFromMuxOut(mem_wb_regFromMuxOut), .regWrite(mem_wb_regWrite), .memToReg(mem_wb_memToReg));
+
+    forwarding_unity forwarding (.reset(reset), .id_ex_rs(id_ex_rsOut), .id_ex_rt(id_ex_rtOut), .ex_mem_rd(ex_mem_regFromMuxOut), .mem_wb_rd(mem_wb_regFromMuxOut), .ex_mem_regWrite(ex_mem_WBOut[1]), .mem_wb_regWrite(mem_wb_regWrite), .forwardA(forwardA), .forwardB(forwardB));
+
+    mux32_3 muxForwardingA (.op(forwardA), .muxIn1(id_ex_readData1Out), .muxIn2(ex_mem_aluOutOut), .muxIn3(outMuxDataMem), .muxOut(muxForwardAOut));
+
+    mux32_3 muxForwardingB (.op(forwardB), .muxIn1(id_ex_readData2Out), .muxIn2(ex_mem_aluOutOut), .muxIn3(outMuxDataMem), .muxOut(muxForwardBOut));
+
+    hazard_unit hazarding (.reset(reset), .id_ex_rt(id_ex_rtOut), .id_ex_memRead(id_ex_MEMOut[1]), .if_id_instruction(if_id_instructionOut), .mux_controller(hzdMuxControl), .pc_write(hzdPCWrite), .if_id_write(hzdIFIDWrite));
+
+    mux_hazard muxHazard (.control(hzdMuxControl), .EXIn(id_ex_EX), .MEMIn(id_ex_MEM), .WBIn(id_ex_WB), .EXOut(hzdEXOut), .MEMOut(hzdMEMOut), .WBOut(hzdWBOut));
+
+    ////////////////////////////////////////////////////////////////////////////
+    //   Atribuição de sinais                                                 //
+    ////////////////////////////////////////////////////////////////////////////
 
     always @ (instruction) begin
         out1 = pcOut/4;

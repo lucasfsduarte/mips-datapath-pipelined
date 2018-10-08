@@ -1,5 +1,5 @@
 Fitter report for mips_pipelined
-Fri Oct 05 21:51:00 2018
+Mon Oct 08 09:52:58 2018
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -66,15 +66,15 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Oct 05 21:51:00 2018       ;
+; Fitter Status                      ; Successful - Mon Oct 08 09:52:58 2018       ;
 ; Quartus Prime Version              ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; mips_pipelined                              ;
 ; Top-level Entity Name              ; mips_pipelined                              ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 2,332 / 114,480 ( 2 % )                     ;
-;     Total combinational functions  ; 2,325 / 114,480 ( 2 % )                     ;
+; Total logic elements               ; 2,334 / 114,480 ( 2 % )                     ;
+;     Total combinational functions  ; 2,324 / 114,480 ( 2 % )                     ;
 ;     Dedicated logic registers      ; 1,393 / 114,480 ( 1 % )                     ;
 ; Total registers                    ; 1393                                        ;
 ; Total pins                         ; 108 / 529 ( 20 % )                          ;
@@ -156,7 +156,7 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.8%      ;
+;     Processor 2            ;   1.9%      ;
 +----------------------------+-------------+
 
 
@@ -166,8 +166,8 @@ agreement for further details.
 ; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+---------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 3948 ) ; 0.00 % ( 0 / 3948 )        ; 0.00 % ( 0 / 3948 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 3948 ) ; 0.00 % ( 0 / 3948 )        ; 0.00 % ( 0 / 3948 )      ;
+;     -- Requested    ; 0.00 % ( 0 / 3947 ) ; 0.00 % ( 0 / 3947 )        ; 0.00 % ( 0 / 3947 )      ;
+;     -- Achieved     ; 0.00 % ( 0 / 3947 ) ; 0.00 % ( 0 / 3947 )        ; 0.00 % ( 0 / 3947 )      ;
 ;                     ;                     ;                            ;                          ;
 ; Routing (by net)    ;                     ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -190,7 +190,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 3938 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 3937 )   ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -198,7 +198,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.pin.
+The pin-out file can be found in C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.pin.
 
 
 +-----------------------------------------------------------------------+
@@ -206,26 +206,26 @@ The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mi
 +---------------------------------------------+-------------------------+
 ; Resource                                    ; Usage                   ;
 +---------------------------------------------+-------------------------+
-; Total logic elements                        ; 2,332 / 114,480 ( 2 % ) ;
-;     -- Combinational with no register       ; 939                     ;
-;     -- Register only                        ; 7                       ;
-;     -- Combinational with a register        ; 1386                    ;
+; Total logic elements                        ; 2,334 / 114,480 ( 2 % ) ;
+;     -- Combinational with no register       ; 941                     ;
+;     -- Register only                        ; 10                      ;
+;     -- Combinational with a register        ; 1383                    ;
 ;                                             ;                         ;
 ; Logic element usage by number of LUT inputs ;                         ;
-;     -- 4 input functions                    ; 1690                    ;
+;     -- 4 input functions                    ; 1686                    ;
 ;     -- 3 input functions                    ; 334                     ;
-;     -- <=2 input functions                  ; 301                     ;
-;     -- Register only                        ; 7                       ;
+;     -- <=2 input functions                  ; 304                     ;
+;     -- Register only                        ; 10                      ;
 ;                                             ;                         ;
 ; Logic elements by mode                      ;                         ;
-;     -- normal mode                          ; 2142                    ;
+;     -- normal mode                          ; 2141                    ;
 ;     -- arithmetic mode                      ; 183                     ;
 ;                                             ;                         ;
 ; Total registers*                            ; 1,393 / 117,053 ( 1 % ) ;
 ;     -- Dedicated logic registers            ; 1,393 / 114,480 ( 1 % ) ;
 ;     -- I/O registers                        ; 0 / 2,573 ( 0 % )       ;
 ;                                             ;                         ;
-; Total LABs:  partially or completely used   ; 192 / 7,155 ( 3 % )     ;
+; Total LABs:  partially or completely used   ; 195 / 7,155 ( 3 % )     ;
 ; Virtual pins                                ; 0                       ;
 ; I/O pins                                    ; 108 / 529 ( 20 % )      ;
 ;     -- Clock pins                           ; 3 / 7 ( 43 % )          ;
@@ -243,12 +243,12 @@ The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mi
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )           ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )           ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )           ;
-; Average interconnect usage (total/H/V)      ; 1.2% / 1.2% / 1.3%      ;
-; Peak interconnect usage (total/H/V)         ; 26.6% / 24.9% / 29.2%   ;
+; Average interconnect usage (total/H/V)      ; 1.4% / 1.3% / 1.4%      ;
+; Peak interconnect usage (total/H/V)         ; 32.1% / 31.7% / 32.6%   ;
 ; Maximum fan-out                             ; 1357                    ;
-; Highest non-global fan-out                  ; 424                     ;
-; Total fan-out                               ; 12514                   ;
-; Average fan-out                             ; 3.17                    ;
+; Highest non-global fan-out                  ; 422                     ;
+; Total fan-out                               ; 12508                   ;
+; Average fan-out                             ; 3.16                    ;
 +---------------------------------------------+-------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -261,26 +261,26 @@ The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mi
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 2332 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
-;     -- Combinational with no register       ; 939                   ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
-;     -- Combinational with a register        ; 1386                  ; 0                              ;
+; Total logic elements                        ; 2334 / 114480 ( 2 % ) ; 0 / 114480 ( 0 % )             ;
+;     -- Combinational with no register       ; 941                   ; 0                              ;
+;     -- Register only                        ; 10                    ; 0                              ;
+;     -- Combinational with a register        ; 1383                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 1690                  ; 0                              ;
+;     -- 4 input functions                    ; 1686                  ; 0                              ;
 ;     -- 3 input functions                    ; 334                   ; 0                              ;
-;     -- <=2 input functions                  ; 301                   ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
+;     -- <=2 input functions                  ; 304                   ; 0                              ;
+;     -- Register only                        ; 10                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 2142                  ; 0                              ;
+;     -- normal mode                          ; 2141                  ; 0                              ;
 ;     -- arithmetic mode                      ; 183                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 1393                  ; 0                              ;
 ;     -- Dedicated logic registers            ; 1393 / 114480 ( 1 % ) ; 0 / 114480 ( 0 % )             ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 192 / 7155 ( 3 % )    ; 0 / 7155 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 195 / 7155 ( 3 % )    ; 0 / 7155 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 108                   ; 0                              ;
@@ -296,8 +296,8 @@ The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mi
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 12509                 ; 5                              ;
-;     -- Registered Connections               ; 5047                  ; 0                              ;
+;     -- Total Connections                    ; 12503                 ; 5                              ;
+;     -- Registered Connections               ; 5052                  ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -344,7 +344,7 @@ The pin-out file can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mi
 ; SW[14]    ; AA23  ; 5        ; 115          ; 10           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[15]    ; AA22  ; 5        ; 115          ; 6            ; 14           ; 34                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[16]    ; Y24   ; 5        ; 115          ; 13           ; 0            ; 46                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
-; SW[17]    ; Y23   ; 5        ; 115          ; 14           ; 7            ; 424                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
+; SW[17]    ; Y23   ; 5        ; 115          ; 14           ; 7            ; 422                   ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[1]     ; AC28  ; 5        ; 115          ; 14           ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[2]     ; AC27  ; 5        ; 115          ; 15           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
 ; SW[3]     ; AD27  ; 5        ; 115          ; 13           ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; User                 ; no        ;
@@ -1370,7 +1370,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                            ; Entity Name       ; Library Name ;
 +-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |mips_pipelined                                     ; 2332 (96)   ; 1393 (32)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 108  ; 0            ; 939 (64)     ; 7 (0)             ; 1386 (32)        ; |mips_pipelined                                                                                ; mips_pipelined    ; work         ;
+; |mips_pipelined                                     ; 2334 (96)   ; 1393 (32)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 108  ; 0            ; 941 (64)     ; 10 (0)            ; 1383 (32)        ; |mips_pipelined                                                                                ; mips_pipelined    ; work         ;
 ;    |clock_gen:clock_gen_i0|                         ; 59 (59)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 1 (1)             ; 32 (32)          ; |mips_pipelined|clock_gen:clock_gen_i0                                                         ; clock_gen         ; work         ;
 ;    |display:display_i0|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|display:display_i0                                                             ; display           ; work         ;
 ;    |display:display_i1|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|display:display_i1                                                             ; display           ; work         ;
@@ -1380,21 +1380,21 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;    |display:display_i5|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|display:display_i5                                                             ; display           ; work         ;
 ;    |display:display_i6|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|display:display_i6                                                             ; display           ; work         ;
 ;    |display:display_i7|                             ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|display:display_i7                                                             ; display           ; work         ;
-;    |mips_dpipelined:mips_dpipelined_i0|             ; 2121 (0)    ; 1328 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 793 (0)      ; 6 (0)             ; 1322 (0)         ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0                                             ; mips_dpipelined   ; work         ;
+;    |mips_dpipelined:mips_dpipelined_i0|             ; 2123 (0)    ; 1328 (0)                  ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 795 (0)      ; 9 (0)             ; 1319 (0)         ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0                                             ; mips_dpipelined   ; work         ;
 ;       |add4:add4_module|                            ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|add4:add4_module                            ; add4              ; work         ;
-;       |alu:alu_module|                              ; 255 (255)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 221 (221)    ; 0 (0)             ; 34 (34)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|alu:alu_module                              ; alu               ; work         ;
+;       |alu:alu_module|                              ; 253 (253)   ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 216 (216)    ; 0 (0)             ; 37 (37)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|alu:alu_module                              ; alu               ; work         ;
 ;       |aluControl:alu_control_module|               ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 1 (1)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|aluControl:alu_control_module               ; aluControl        ; work         ;
 ;       |control:control_module|                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|control:control_module                      ; control           ; work         ;
 ;       |ex_mem:exmem|                                ; 71 (71)     ; 71 (71)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 71 (71)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem                                ; ex_mem            ; work         ;
 ;       |forwarding_unity:forwarding|                 ; 23 (23)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 23 (23)      ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding                 ; forwarding_unity  ; work         ;
-;       |id_ex:idex|                                  ; 1396 (1396) ; 116 (116)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 267 (267)    ; 1 (1)             ; 1128 (1128)      ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|id_ex:idex                                  ; id_ex             ; work         ;
+;       |id_ex:idex|                                  ; 1401 (1401) ; 116 (116)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 278 (278)    ; 2 (2)             ; 1121 (1121)      ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|id_ex:idex                                  ; id_ex             ; work         ;
 ;       |if_id:ifid|                                  ; 50 (50)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 48 (48)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|if_id:ifid                                  ; if_id             ; work         ;
 ;       |instructionMemory:instruction_memory_module| ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|instructionMemory:instruction_memory_module ; instructionMemory ; work         ;
-;       |mem_wb:memwb|                                ; 39 (39)     ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 39 (39)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb                                ; mem_wb            ; work         ;
-;       |mux32:mux_alu|                               ; 92 (92)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 91 (91)      ; 0 (0)             ; 1 (1)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu                               ; mux32             ; work         ;
+;       |mem_wb:memwb|                                ; 41 (41)     ; 39 (39)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 39 (39)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb                                ; mem_wb            ; work         ;
+;       |mux32:mux_alu|                               ; 90 (90)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 90 (90)      ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu                               ; mux32             ; work         ;
 ;       |mux32_3:muxForwardingA|                      ; 64 (64)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 0 (0)             ; 0 (0)            ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|mux32_3:muxForwardingA                      ; mux32_3           ; work         ;
 ;       |pc:pc_module|                                ; 30 (30)     ; 30 (30)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 30 (30)          ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|pc:pc_module                                ; pc                ; work         ;
-;       |registers:registers_module|                  ; 1095 (1095) ; 1024 (1024)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 5 (5)             ; 1019 (1019)      ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|registers:registers_module                  ; registers         ; work         ;
+;       |registers:registers_module|                  ; 1090 (1090) ; 1024 (1024)               ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 7 (7)             ; 1017 (1017)      ; |mips_pipelined|mips_dpipelined:mips_dpipelined_i0|registers:registers_module                  ; registers         ; work         ;
 +-----------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1663,37 +1663,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|regFromMuxOut[1]                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|regFromMuxOut[0]                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[0]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[1]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[2]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[3]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[4]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[5]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[6]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[7]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[8]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[9]                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[10]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[11]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[12]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[13]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[14]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[15]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[16]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[17]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[18]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[19]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[20]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[21]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[22]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[23]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[24]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[25]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[26]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[27]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[28]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[29]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[30]                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[31]                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[1]                      ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[2]                      ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[3]                      ; 1                 ; 6       ;
@@ -1725,6 +1694,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[29]                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[30]                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData2Out[31]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[1]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[2]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[3]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[4]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[5]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[6]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[7]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[8]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[9]                      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[10]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[11]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[12]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[13]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[14]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[15]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[16]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[17]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[18]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[19]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[20]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[21]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[22]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[23]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[24]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[25]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[26]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[27]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[28]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[29]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[30]                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|readData1Out[31]                     ; 1                 ; 6       ;
 ;      - INSTR_COUNTER[0]                                                                   ; 1                 ; 6       ;
 ;      - INSTR_COUNTER[1]                                                                   ; 1                 ; 6       ;
 ;      - INSTR_COUNTER[2]                                                                   ; 1                 ; 6       ;
@@ -1787,50 +1787,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|pcOut[29]                          ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|pcOut[30]                          ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|pcOut[31]                          ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Add0~29                          ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Add0~39                          ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|haveInstrOut~0                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|haveInstrOut~0                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|haveInstrOut~0                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|ex_mem:exmem|branchOut~0                        ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|aluControl:alu_control_module|aluCtrl[3]~1      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~0                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~0                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding|forwardA[0]~0       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding|forwardA[1]~6       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[20]~25                   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[0]~27                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~1                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|aluControl:alu_control_module|aluCtrl[2]~2      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding|forwardB[1]~5       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding|forwardA[1]~7       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~3                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~4                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|forwarding_unity:forwarding|forwardB[1]~4       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~1                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|aluControl:alu_control_module|aluCtrl[2]~2      ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[23]~43                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[20]~49                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[0]~51                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~3                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~4                     ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~0                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[18]~17                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[19]~21                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[1]~26                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[28]~19                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[27]~24                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[26]~28                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~2                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|mux32:mux_alu|mux32Out[23]~75                   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[23]~39                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[24]~43                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[25]~47                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[25]~41                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[24]~45                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[23]~49                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~4                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[10]~60                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[28]~65                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[6]~69                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[16]~62                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~66                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[10]~70                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~6                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[26]~80                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[7]~84                     ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[3]~89                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[6]~82                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[5]~86                     ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[14]~90                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~8                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~9                         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|Equal0~10                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[0]~112                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[0]~116                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[2]~102                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[1]~107                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[12]~111                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[11]~116                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[0]~117                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[0]~121                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~0                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|signExtendOut~0                      ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|MEMOut~0                             ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|MEMOut~1                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~0                              ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|ALUOpOut~0                           ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|WBOut~1                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~1                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~0                        ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|regWrite~0                         ; 1                 ; 6       ;
@@ -1845,64 +1847,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rsOut~2                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rsOut~3                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rsOut~4                              ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[15]~117                   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|ALUSrcOut~0                          ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~122                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|ALUSrcOut~1                          ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rtOut~0                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rtOut~1                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rtOut~2                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rtOut~3                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rtOut~4                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~1                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~2                              ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[14]~118                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[30]~123                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[29]~124                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~2                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[13]~119                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~3                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[12]~120                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~4                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[11]~121                   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~3                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~5                        ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~6                        ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[9]~122                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[8]~123                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~7                        ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~8                        ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[22]~125                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~9                        ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[21]~126                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~10                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[5]~124                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~11                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[4]~125                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[20]~127                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~12                       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[19]~128                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~13                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[2]~126                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[18]~129                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~14                       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[17]~130                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~15                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~16                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[16]~127                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~17                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[17]~128                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~2                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~18                       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[13]~131                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~19                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~20                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[20]~129                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|rdOut~3                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~21                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[21]~130                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~22                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[22]~131                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[9]~132                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[8]~133                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~23                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~24                       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[7]~134                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~25                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~26                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[29]~132                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~27                       ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[4]~135                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[3]~136                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~28                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[27]~133                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~29                       ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~30                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[31]~134                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|mem_wb:memwb|ALUOutOut~31                       ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|alu:alu_module|aluOut[30]~135                   ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~1                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~2                              ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~3                              ; 1                 ; 6       ;
@@ -1932,40 +1930,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~27                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~28                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|id_ex:idex|pcOut~29                             ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut[22]~60                         ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[16]~31                ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~34                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~0          ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[21][12]~1  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[25][10]~2  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[17][31]~3  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[29][0]~4   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[26][26]~5  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[22][19]~6  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[18][31]~7  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[30][27]~8  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[24][26]~9  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[20][31]~10 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[16][31]~11 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[28][1]~12  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[23][4]~13  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[27][0]~14  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[19][31]~15 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[31][24]~16 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[6][31]~17  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[5][31]~18  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[4][31]~19  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[7][25]~20  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[9][31]~21  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[10][3]~22  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[8][31]~23  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[11][31]~24 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[1][7]~25   ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[2][15]~26  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[0][31]~27  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[3][31]~28  ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[14][31]~29 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[13][31]~30 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[12][31]~31 ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[15][31]~32 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[21][6]~1   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[25][23]~2  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[17][29]~3  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[29][13]~4  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[26][6]~5   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[22][9]~6   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[18][4]~7   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[30][7]~8   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[24][15]~9  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[20][8]~10  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[16][27]~11 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[28][3]~12  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[23][11]~13 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[27][6]~14  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[19][27]~15 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[31][5]~16  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[6][22]~17  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[5][5]~18   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[4][16]~19  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[7][2]~20   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[9][11]~21  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[10][10]~22 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[8][0]~23   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[11][21]~24 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[1][21]~25  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[2][17]~26  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[0][13]~27  ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[3][1]~28   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[14][19]~29 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[13][18]~30 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[12][23]~31 ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[15][29]~32 ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~33         ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~34         ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~35         ; 1                 ; 6       ;
@@ -2001,21 +2000,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~65         ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~66         ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers~67         ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~32                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~61                             ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~34                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~60                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~35                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~36                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~37                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~38                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~39                    ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~41                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~40                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~42                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~43                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~44                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~45                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~46                    ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~47                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut~48                    ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~61                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~62                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~63                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~64                             ; 1                 ; 6       ;
@@ -2044,8 +2043,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~87                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~88                             ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~89                             ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|if_id:ifid|pcOut~90                             ; 1                 ; 6       ;
-;      - mips_dpipelined:mips_dpipelined_i0|control:control_module|branch                   ; 1                 ; 6       ;
+;      - mips_dpipelined:mips_dpipelined_i0|control:control_module|if_flush                 ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|control:control_module|aluOp[1]                 ; 1                 ; 6       ;
 ;      - mips_dpipelined:mips_dpipelined_i0|control:control_module|aluSrc                   ; 1                 ; 6       ;
 ; CLOCK_50                                                                                  ;                   ;         ;
@@ -2059,42 +2057,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                                           ; PIN_Y2             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
 ; CLOCK_50                                                                           ; PIN_Y2             ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; SW[17]                                                                             ; PIN_Y23            ; 424     ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; SW[17]                                                                             ; PIN_Y23            ; 422     ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
 ; clock_gen:clock_gen_i0|OUT_CLOCK                                                   ; FF_X1_Y36_N3       ; 5       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; clock_gen:clock_gen_i0|OUT_CLOCK                                                   ; FF_X1_Y36_N3       ; 1357    ; Clock        ; yes    ; Global Clock         ; GCLK0            ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr4~0                ; LCCOMB_X56_Y20_N16 ; 3       ; Latch enable ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[0][31]~27  ; LCCOMB_X67_Y35_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[10][3]~22  ; LCCOMB_X67_Y35_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[11][31]~24 ; LCCOMB_X59_Y33_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[12][31]~31 ; LCCOMB_X61_Y35_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[13][31]~30 ; LCCOMB_X61_Y36_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[14][31]~29 ; LCCOMB_X61_Y35_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[15][31]~32 ; LCCOMB_X61_Y35_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[16][31]~11 ; LCCOMB_X67_Y35_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[17][31]~3  ; LCCOMB_X62_Y35_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[18][31]~7  ; LCCOMB_X67_Y35_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[19][31]~15 ; LCCOMB_X61_Y35_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[1][7]~25   ; LCCOMB_X67_Y35_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[20][31]~10 ; LCCOMB_X61_Y35_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[21][12]~1  ; LCCOMB_X61_Y36_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[22][19]~6  ; LCCOMB_X61_Y35_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[23][4]~13  ; LCCOMB_X61_Y35_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[24][26]~9  ; LCCOMB_X67_Y35_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[25][10]~2  ; LCCOMB_X62_Y35_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[26][26]~5  ; LCCOMB_X67_Y35_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[27][0]~14  ; LCCOMB_X67_Y35_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[28][1]~12  ; LCCOMB_X61_Y35_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[29][0]~4   ; LCCOMB_X61_Y36_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[2][15]~26  ; LCCOMB_X67_Y35_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[30][27]~8  ; LCCOMB_X61_Y35_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[31][24]~16 ; LCCOMB_X61_Y35_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[3][31]~28  ; LCCOMB_X67_Y35_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[4][31]~19  ; LCCOMB_X61_Y35_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[5][31]~18  ; LCCOMB_X61_Y36_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[6][31]~17  ; LCCOMB_X62_Y35_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[7][25]~20  ; LCCOMB_X62_Y35_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[8][31]~23  ; LCCOMB_X67_Y35_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[9][31]~21  ; LCCOMB_X67_Y35_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; clock_gen:clock_gen_i0|OUT_CLOCK                                                   ; FF_X1_Y36_N3       ; 1357    ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr0~0                ; LCCOMB_X76_Y37_N28 ; 3       ; Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[0][13]~27  ; LCCOMB_X68_Y39_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[10][10]~22 ; LCCOMB_X68_Y36_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[11][21]~24 ; LCCOMB_X68_Y39_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[12][23]~31 ; LCCOMB_X68_Y39_N14 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[13][18]~30 ; LCCOMB_X68_Y39_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[14][19]~29 ; LCCOMB_X68_Y36_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[15][29]~32 ; LCCOMB_X68_Y36_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[16][27]~11 ; LCCOMB_X68_Y39_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[17][29]~3  ; LCCOMB_X68_Y36_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[18][4]~7   ; LCCOMB_X68_Y36_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[19][27]~15 ; LCCOMB_X68_Y39_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[1][21]~25  ; LCCOMB_X68_Y36_N8  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[20][8]~10  ; LCCOMB_X68_Y39_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[21][6]~1   ; LCCOMB_X68_Y39_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[22][9]~6   ; LCCOMB_X68_Y36_N0  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[23][11]~13 ; LCCOMB_X68_Y36_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[24][15]~9  ; LCCOMB_X68_Y39_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[25][23]~2  ; LCCOMB_X68_Y36_N20 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[26][6]~5   ; LCCOMB_X69_Y39_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[27][6]~14  ; LCCOMB_X68_Y39_N22 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[28][3]~12  ; LCCOMB_X68_Y36_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[29][13]~4  ; LCCOMB_X68_Y39_N30 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[2][17]~26  ; LCCOMB_X68_Y36_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[30][7]~8   ; LCCOMB_X68_Y36_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[31][5]~16  ; LCCOMB_X68_Y36_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[3][1]~28   ; LCCOMB_X68_Y39_N18 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[4][16]~19  ; LCCOMB_X69_Y39_N16 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[5][5]~18   ; LCCOMB_X68_Y39_N26 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[6][22]~17  ; LCCOMB_X69_Y38_N10 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[7][2]~20   ; LCCOMB_X69_Y39_N2  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[8][0]~23   ; LCCOMB_X68_Y39_N4  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|registers:registers_module|registers[9][11]~21  ; LCCOMB_X68_Y36_N28 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2104,8 +2102,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; CLOCK_50                                                            ; PIN_Y2             ; 32      ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
-; clock_gen:clock_gen_i0|OUT_CLOCK                                    ; FF_X1_Y36_N3       ; 1357    ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
-; mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr4~0 ; LCCOMB_X56_Y20_N16 ; 3       ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
+; clock_gen:clock_gen_i0|OUT_CLOCK                                    ; FF_X1_Y36_N3       ; 1357    ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr0~0 ; LCCOMB_X76_Y37_N28 ; 3       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
 +---------------------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -2114,50 +2112,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+---------------------------+
 ; Routing Resource Type ; Usage                     ;
 +-----------------------+---------------------------+
-; Block interconnects   ; 4,303 / 342,891 ( 1 % )   ;
-; C16 interconnects     ; 73 / 10,120 ( < 1 % )     ;
-; C4 interconnects      ; 2,780 / 209,544 ( 1 % )   ;
-; Direct links          ; 505 / 342,891 ( < 1 % )   ;
+; Block interconnects   ; 4,344 / 342,891 ( 1 % )   ;
+; C16 interconnects     ; 89 / 10,120 ( < 1 % )     ;
+; C4 interconnects      ; 3,017 / 209,544 ( 1 % )   ;
+; Direct links          ; 457 / 342,891 ( < 1 % )   ;
 ; Global clocks         ; 3 / 20 ( 15 % )           ;
-; Local interconnects   ; 1,160 / 119,088 ( < 1 % ) ;
-; R24 interconnects     ; 105 / 9,963 ( 1 % )       ;
-; R4 interconnects      ; 3,302 / 289,782 ( 1 % )   ;
+; Local interconnects   ; 1,099 / 119,088 ( < 1 % ) ;
+; R24 interconnects     ; 120 / 9,963 ( 1 % )       ;
+; R4 interconnects      ; 3,740 / 289,782 ( 1 % )   ;
 +-----------------------+---------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                          ;
 +---------------------------------------------+-------------------------------+
-; Number of Logic Elements  (Average = 12.15) ; Number of LABs  (Total = 192) ;
+; Number of Logic Elements  (Average = 11.97) ; Number of LABs  (Total = 195) ;
 +---------------------------------------------+-------------------------------+
-; 1                                           ; 14                            ;
-; 2                                           ; 3                             ;
-; 3                                           ; 9                             ;
-; 4                                           ; 1                             ;
-; 5                                           ; 1                             ;
-; 6                                           ; 2                             ;
-; 7                                           ; 8                             ;
-; 8                                           ; 3                             ;
-; 9                                           ; 4                             ;
-; 10                                          ; 6                             ;
+; 1                                           ; 16                            ;
+; 2                                           ; 14                            ;
+; 3                                           ; 0                             ;
+; 4                                           ; 3                             ;
+; 5                                           ; 3                             ;
+; 6                                           ; 1                             ;
+; 7                                           ; 3                             ;
+; 8                                           ; 4                             ;
+; 9                                           ; 2                             ;
+; 10                                          ; 4                             ;
 ; 11                                          ; 7                             ;
-; 12                                          ; 8                             ;
-; 13                                          ; 11                            ;
-; 14                                          ; 22                            ;
-; 15                                          ; 24                            ;
-; 16                                          ; 69                            ;
+; 12                                          ; 7                             ;
+; 13                                          ; 13                            ;
+; 14                                          ; 15                            ;
+; 15                                          ; 42                            ;
+; 16                                          ; 61                            ;
 +---------------------------------------------+-------------------------------+
 
 
 +--------------------------------------------------------------------+
 ; LAB-wide Signals                                                   ;
 +------------------------------------+-------------------------------+
-; LAB-wide Signals  (Average = 1.53) ; Number of LABs  (Total = 192) ;
+; LAB-wide Signals  (Average = 1.58) ; Number of LABs  (Total = 195) ;
 +------------------------------------+-------------------------------+
-; 1 Clock                            ; 166                           ;
-; 1 Clock enable                     ; 14                            ;
-; 1 Sync. clear                      ; 13                            ;
-; 2 Clock enables                    ; 98                            ;
+; 1 Clock                            ; 173                           ;
+; 1 Clock enable                     ; 21                            ;
+; 1 Sync. clear                      ; 17                            ;
+; 2 Clock enables                    ; 95                            ;
 ; 2 Clocks                           ; 2                             ;
 +------------------------------------+-------------------------------+
 
@@ -2165,121 +2163,122 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Signals Sourced  (Average = 19.22) ; Number of LABs  (Total = 192) ;
+; Number of Signals Sourced  (Average = 18.94) ; Number of LABs  (Total = 195) ;
 +----------------------------------------------+-------------------------------+
-; 0                                            ; 1                             ;
-; 1                                            ; 9                             ;
-; 2                                            ; 7                             ;
-; 3                                            ; 4                             ;
-; 4                                            ; 2                             ;
-; 5                                            ; 3                             ;
-; 6                                            ; 2                             ;
+; 0                                            ; 0                             ;
+; 1                                            ; 5                             ;
+; 2                                            ; 15                            ;
+; 3                                            ; 5                             ;
+; 4                                            ; 8                             ;
+; 5                                            ; 0                             ;
+; 6                                            ; 0                             ;
 ; 7                                            ; 1                             ;
-; 8                                            ; 3                             ;
+; 8                                            ; 6                             ;
 ; 9                                            ; 1                             ;
-; 10                                           ; 3                             ;
-; 11                                           ; 2                             ;
-; 12                                           ; 6                             ;
-; 13                                           ; 3                             ;
+; 10                                           ; 0                             ;
+; 11                                           ; 0                             ;
+; 12                                           ; 2                             ;
+; 13                                           ; 4                             ;
 ; 14                                           ; 3                             ;
-; 15                                           ; 5                             ;
-; 16                                           ; 9                             ;
-; 17                                           ; 15                            ;
-; 18                                           ; 8                             ;
-; 19                                           ; 14                            ;
-; 20                                           ; 7                             ;
-; 21                                           ; 4                             ;
+; 15                                           ; 12                            ;
+; 16                                           ; 8                             ;
+; 17                                           ; 10                            ;
+; 18                                           ; 9                             ;
+; 19                                           ; 8                             ;
+; 20                                           ; 6                             ;
+; 21                                           ; 5                             ;
 ; 22                                           ; 7                             ;
-; 23                                           ; 6                             ;
-; 24                                           ; 4                             ;
-; 25                                           ; 4                             ;
-; 26                                           ; 4                             ;
+; 23                                           ; 2                             ;
+; 24                                           ; 9                             ;
+; 25                                           ; 8                             ;
+; 26                                           ; 7                             ;
 ; 27                                           ; 4                             ;
-; 28                                           ; 5                             ;
-; 29                                           ; 6                             ;
-; 30                                           ; 11                            ;
-; 31                                           ; 5                             ;
-; 32                                           ; 24                            ;
+; 28                                           ; 10                            ;
+; 29                                           ; 8                             ;
+; 30                                           ; 13                            ;
+; 31                                           ; 4                             ;
+; 32                                           ; 15                            ;
 +----------------------------------------------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                          ;
 +--------------------------------------------------+-------------------------------+
-; Number of Signals Sourced Out  (Average = 11.64) ; Number of LABs  (Total = 192) ;
+; Number of Signals Sourced Out  (Average = 11.70) ; Number of LABs  (Total = 195) ;
 +--------------------------------------------------+-------------------------------+
-; 0                                                ; 1                             ;
-; 1                                                ; 11                            ;
-; 2                                                ; 9                             ;
-; 3                                                ; 4                             ;
-; 4                                                ; 2                             ;
-; 5                                                ; 4                             ;
-; 6                                                ; 9                             ;
-; 7                                                ; 10                            ;
-; 8                                                ; 19                            ;
-; 9                                                ; 6                             ;
-; 10                                               ; 14                            ;
-; 11                                               ; 15                            ;
-; 12                                               ; 8                             ;
-; 13                                               ; 5                             ;
-; 14                                               ; 7                             ;
-; 15                                               ; 6                             ;
-; 16                                               ; 18                            ;
-; 17                                               ; 2                             ;
-; 18                                               ; 11                            ;
-; 19                                               ; 3                             ;
-; 20                                               ; 11                            ;
+; 0                                                ; 0                             ;
+; 1                                                ; 9                             ;
+; 2                                                ; 20                            ;
+; 3                                                ; 3                             ;
+; 4                                                ; 4                             ;
+; 5                                                ; 1                             ;
+; 6                                                ; 4                             ;
+; 7                                                ; 14                            ;
+; 8                                                ; 12                            ;
+; 9                                                ; 13                            ;
+; 10                                               ; 15                            ;
+; 11                                               ; 9                             ;
+; 12                                               ; 5                             ;
+; 13                                               ; 4                             ;
+; 14                                               ; 8                             ;
+; 15                                               ; 9                             ;
+; 16                                               ; 14                            ;
+; 17                                               ; 4                             ;
+; 18                                               ; 12                            ;
+; 19                                               ; 5                             ;
+; 20                                               ; 13                            ;
 ; 21                                               ; 1                             ;
-; 22                                               ; 11                            ;
+; 22                                               ; 6                             ;
 ; 23                                               ; 2                             ;
-; 24                                               ; 1                             ;
+; 24                                               ; 5                             ;
 ; 25                                               ; 1                             ;
 ; 26                                               ; 1                             ;
+; 27                                               ; 1                             ;
 +--------------------------------------------------+-------------------------------+
 
 
 +------------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                          ;
 +----------------------------------------------+-------------------------------+
-; Number of Distinct Inputs  (Average = 21.62) ; Number of LABs  (Total = 192) ;
+; Number of Distinct Inputs  (Average = 21.52) ; Number of LABs  (Total = 195) ;
 +----------------------------------------------+-------------------------------+
 ; 0                                            ; 0                             ;
 ; 1                                            ; 0                             ;
-; 2                                            ; 3                             ;
-; 3                                            ; 6                             ;
-; 4                                            ; 4                             ;
-; 5                                            ; 0                             ;
-; 6                                            ; 5                             ;
-; 7                                            ; 2                             ;
-; 8                                            ; 3                             ;
+; 2                                            ; 1                             ;
+; 3                                            ; 1                             ;
+; 4                                            ; 6                             ;
+; 5                                            ; 7                             ;
+; 6                                            ; 11                            ;
+; 7                                            ; 3                             ;
+; 8                                            ; 4                             ;
 ; 9                                            ; 2                             ;
-; 10                                           ; 4                             ;
-; 11                                           ; 4                             ;
-; 12                                           ; 3                             ;
-; 13                                           ; 5                             ;
+; 10                                           ; 5                             ;
+; 11                                           ; 3                             ;
+; 12                                           ; 4                             ;
+; 13                                           ; 2                             ;
 ; 14                                           ; 3                             ;
-; 15                                           ; 5                             ;
-; 16                                           ; 2                             ;
-; 17                                           ; 7                             ;
-; 18                                           ; 6                             ;
+; 15                                           ; 2                             ;
+; 16                                           ; 5                             ;
+; 17                                           ; 4                             ;
+; 18                                           ; 7                             ;
 ; 19                                           ; 9                             ;
-; 20                                           ; 6                             ;
-; 21                                           ; 11                            ;
-; 22                                           ; 9                             ;
+; 20                                           ; 9                             ;
+; 21                                           ; 6                             ;
+; 22                                           ; 5                             ;
 ; 23                                           ; 8                             ;
-; 24                                           ; 1                             ;
-; 25                                           ; 13                            ;
+; 24                                           ; 3                             ;
+; 25                                           ; 6                             ;
 ; 26                                           ; 6                             ;
-; 27                                           ; 10                            ;
-; 28                                           ; 5                             ;
-; 29                                           ; 7                             ;
-; 30                                           ; 5                             ;
-; 31                                           ; 2                             ;
-; 32                                           ; 7                             ;
-; 33                                           ; 9                             ;
-; 34                                           ; 5                             ;
-; 35                                           ; 6                             ;
-; 36                                           ; 4                             ;
+; 27                                           ; 6                             ;
+; 28                                           ; 7                             ;
+; 29                                           ; 3                             ;
+; 30                                           ; 9                             ;
+; 31                                           ; 5                             ;
+; 32                                           ; 11                            ;
+; 33                                           ; 5                             ;
+; 34                                           ; 8                             ;
+; 35                                           ; 5                             ;
+; 36                                           ; 9                             ;
 ; 37                                           ; 5                             ;
 +----------------------------------------------+-------------------------------+
 
@@ -2534,79 +2533,79 @@ Info (332111): Found 3 clocks
     Info (332111):   20.000    CLOCK2_50
     Info (332111):   20.000    CLOCK3_50
     Info (332111):   20.000     CLOCK_50
-Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 47
+Info (176353): Automatically promoted node CLOCK_50~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 47
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node clock_gen:clock_gen_i0|OUT_CLOCK File: C:/Users/lucas/Desktop/mips-pipelined/fpga/clock_gen.v Line: 4
-Info (176353): Automatically promoted node clock_gen:clock_gen_i0|OUT_CLOCK  File: C:/Users/lucas/Desktop/mips-pipelined/fpga/clock_gen.v Line: 4
+        Info (176357): Destination node clock_gen:clock_gen_i0|OUT_CLOCK File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/fpga/clock_gen.v Line: 4
+Info (176353): Automatically promoted node clock_gen:clock_gen_i0|OUT_CLOCK  File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/fpga/clock_gen.v Line: 4
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node clock_gen:clock_gen_i0|OUT_CLOCK~1 File: C:/Users/lucas/Desktop/mips-pipelined/fpga/clock_gen.v Line: 4
-        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[10] File: C:/Users/lucas/Desktop/mips-pipelined/hdl/if_id.v Line: 16
-        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[26] File: C:/Users/lucas/Desktop/mips-pipelined/hdl/if_id.v Line: 16
-        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[27] File: C:/Users/lucas/Desktop/mips-pipelined/hdl/if_id.v Line: 16
-Info (176353): Automatically promoted node mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr4~0  File: C:/Users/lucas/Desktop/mips-pipelined/hdl/control.v Line: 26
+        Info (176357): Destination node clock_gen:clock_gen_i0|OUT_CLOCK~1 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/fpga/clock_gen.v Line: 4
+        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[10] File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/hdl/if_id.v Line: 16
+        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[27] File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/hdl/if_id.v Line: 16
+        Info (176357): Destination node mips_dpipelined:mips_dpipelined_i0|if_id:ifid|instructionOut[26] File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/hdl/if_id.v Line: 16
+Info (176353): Automatically promoted node mips_dpipelined:mips_dpipelined_i0|control:control_module|WideOr0~0  File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/hdl/control.v Line: 26
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:02
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 22% of the available device resources in the region that extends from location X58_Y24 to location X68_Y36
+    Info (170196): Router estimated peak interconnect usage is 25% of the available device resources in the region that extends from location X58_Y37 to location X68_Y48
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 0.38 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.30 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
 Warning (169177): 25 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin CLOCK2_50 uses I/O standard 3.3-V LVTTL at AG14 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 48
-    Info (169178): Pin CLOCK3_50 uses I/O standard 3.3-V LVTTL at AG15 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 49
-    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at M23 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 56
-    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at M21 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 56
-    Info (169178): Pin KEY[2] uses I/O standard 3.3-V LVTTL at N21 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 56
-    Info (169178): Pin KEY[3] uses I/O standard 3.3-V LVTTL at R24 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 56
-    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at AB28 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at AC28 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at AC27 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at AD27 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at AB27 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at AC26 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at AD26 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at AB26 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at AC25 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at AB25 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[10] uses I/O standard 3.3-V LVTTL at AC24 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[11] uses I/O standard 3.3-V LVTTL at AB24 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[12] uses I/O standard 3.3-V LVTTL at AB23 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[13] uses I/O standard 3.3-V LVTTL at AA24 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[14] uses I/O standard 3.3-V LVTTL at AA23 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[15] uses I/O standard 3.3-V LVTTL at AA22 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[16] uses I/O standard 3.3-V LVTTL at Y24 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin SW[17] uses I/O standard 3.3-V LVTTL at Y23 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 59
-    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.v Line: 47
-Info (144001): Generated suppressed messages file C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.fit.smsg
+    Info (169178): Pin CLOCK2_50 uses I/O standard 3.3-V LVTTL at AG14 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 48
+    Info (169178): Pin CLOCK3_50 uses I/O standard 3.3-V LVTTL at AG15 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 49
+    Info (169178): Pin KEY[0] uses I/O standard 3.3-V LVTTL at M23 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 56
+    Info (169178): Pin KEY[1] uses I/O standard 3.3-V LVTTL at M21 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 56
+    Info (169178): Pin KEY[2] uses I/O standard 3.3-V LVTTL at N21 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 56
+    Info (169178): Pin KEY[3] uses I/O standard 3.3-V LVTTL at R24 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 56
+    Info (169178): Pin SW[0] uses I/O standard 3.3-V LVTTL at AB28 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[1] uses I/O standard 3.3-V LVTTL at AC28 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[2] uses I/O standard 3.3-V LVTTL at AC27 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[3] uses I/O standard 3.3-V LVTTL at AD27 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[4] uses I/O standard 3.3-V LVTTL at AB27 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[5] uses I/O standard 3.3-V LVTTL at AC26 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[6] uses I/O standard 3.3-V LVTTL at AD26 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[7] uses I/O standard 3.3-V LVTTL at AB26 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[8] uses I/O standard 3.3-V LVTTL at AC25 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[9] uses I/O standard 3.3-V LVTTL at AB25 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[10] uses I/O standard 3.3-V LVTTL at AC24 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[11] uses I/O standard 3.3-V LVTTL at AB24 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[12] uses I/O standard 3.3-V LVTTL at AB23 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[13] uses I/O standard 3.3-V LVTTL at AA24 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[14] uses I/O standard 3.3-V LVTTL at AA23 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[15] uses I/O standard 3.3-V LVTTL at AA22 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[16] uses I/O standard 3.3-V LVTTL at Y24 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin SW[17] uses I/O standard 3.3-V LVTTL at Y23 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 59
+    Info (169178): Pin CLOCK_50 uses I/O standard 3.3-V LVTTL at Y2 File: C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.v Line: 47
+Info (144001): Generated suppressed messages file C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 5562 megabytes
-    Info: Processing ended: Fri Oct 05 21:51:01 2018
-    Info: Elapsed time: 00:00:49
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Peak virtual memory: 5566 megabytes
+    Info: Processing ended: Mon Oct 08 09:53:02 2018
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:45
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/lucas/Desktop/mips-pipelined/altera/mips_pipelined.fit.smsg.
+The suppressed messages can be found in C:/Users/lucas/Documents/git/mips-datapath-pipelined/altera/mips_pipelined.fit.smsg.
 
 

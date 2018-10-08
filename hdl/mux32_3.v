@@ -14,11 +14,11 @@ module mux32_3 (op, muxIn1, muxIn2, muxIn3, muxOut);
 	always@ (*) begin
 		case (op)
             2'b00:
-                muxOut <= muxIn1;
+                muxOut = muxIn1;
             2'b10:
-                muxOut <= muxIn2;
+                muxOut = muxIn2;
             2'b01:
-                muxOut <= muxIn3;
+                muxOut = muxIn3;
 		endcase
 	end
 endmodule

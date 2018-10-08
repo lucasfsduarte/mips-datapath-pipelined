@@ -14,16 +14,17 @@ module dataMemory (clk, address, memWrite, memRead, writeData, readData, reset);
     // Aplica o reset
     // Inicializa todas as posições da memória com o valor 0;
         if (reset) begin
-            for(i = 0; i <= 31; i = i + 1)
+            for(i = 0; i <= 31; i = i + 1) begin
 		          memory[i] <= 32'b0;
+            end
         end
         else begin
     		if (memWrite) begin
-                memory[address] = writeData;
+                memory[address] <= writeData;
     		end
 
     		if (memRead) begin
-    			readData = memory[address];
+    			readData <= memory[address];
     		end
         end
 	end

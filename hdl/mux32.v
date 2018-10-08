@@ -15,9 +15,9 @@ module mux32 (mux32In1, mux32In2, op_mux32, mux32Out);
 	always@ (*) begin
 		case (op_mux32)
 		      1'b0:
-                mux32Out <= mux32In1;
+                mux32Out = mux32In1;
               1'b1:
-                mux32Out <= mux32In2;
+                mux32Out = mux32In2;
 		endcase
 	end
 
